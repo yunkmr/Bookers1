@@ -1,5 +1,7 @@
+<!--フラッシュメッセージ-->
 <p id="notice"><%= notice %></p>
 
+<!--一覧データの表示-->
 <h1>Books</h1>
 <table>
   <thead>
@@ -24,6 +26,7 @@
 
 
 <h2>New book</h2>
+<!--エラーメッセージの出力-->
 <% if @book.errors.any? %>
   <div id="error_explanation">
     <h2><%= @book.errors.count %>errors prohibited this book from being saved:</h2>
@@ -35,7 +38,7 @@
   </div>
 <% end %>
 
-
+<!--新規登録フォーム-->
 <%= form_with model:@book, local:true do |f| %>
   <div class="field">
     <%= f.label :title %>
