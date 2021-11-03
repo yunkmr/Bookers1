@@ -14,17 +14,14 @@ class BooksController < ApplicationController
       @books = Book.all
       render :index
     end
-
   end
 
   def show
     @book = Book.find(params[:id])
-
   end
 
   def edit
     @book = Book.find(params[:id])
-
   end
 
   def update
@@ -35,7 +32,6 @@ class BooksController < ApplicationController
     else
       render :edit
     end
-
   end
 
   def destroy
@@ -46,7 +42,6 @@ class BooksController < ApplicationController
     else
       render :index
     end
-
   end
 
   private
